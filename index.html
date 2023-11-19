@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relaxing Music Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Relaxing Music Hub</h1>
+        <p>Your go-to place for soothing melodies</p>
+    </header>
+
+    <main>
+        <section class="playlist">
+            <h2>Featured Playlist</h2>
+            <ul>
+                <li>Experience the tranquility with "Endless" by Peder B. Helland. Let the gentle sounds of nature and soft instrumentals take you to a place of serenity.</li>
+                <li>Find inner peace with "The Moment" by Peder B. Helland. This relaxing piano melody of soft rain sound is great for sleep and relaxation.</li>
+                <li>Unwind and relax to the soulful tunes of "Flying", "Ocean Waves", "Purple Sunset" and many more. Let the soothing melodies carry away the stresses of the day.</li>
+            
+            </ul>
+        </section>
+
+        <section class="youtube-playlist">
+            <h2>YouTube Playlist</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLQ_PIlf6OzqJv2KlBn3rUoCeceVThfwlY&si=UGUf_H-wY19cr27c" frameborder="0" allowfullscreen></iframe>
+        </section>
+
+        <section class="about">
+            <h2>About Us</h2>
+            <p>Welcome to Relaxing Music Hub, your sanctuary of tranquility in the digital world. Our mission is to provide a haven where music enthusiasts can discover and immerse themselves in the calming beauty of melodies.</p>
+
+            <p>At Relaxing Music Hub, we believe that music has the power to heal, inspire, and uplift the human spirit. Our carefully curated playlists are designed to accompany you on your journey to relaxation, whether you're seeking a moment of peace or a soundtrack for meditation.</p>
+
+            <p>Explore our featured playlists, curated with love and attention to bring you a diverse selection of calming tunes. We invite you to join our community and subscribe to our newsletter for personalized updates based on your musical taste.</p>
+
+            <p>Thank you for choosing Relaxing Music Hub as your musical retreat. Let the melodies guide you to a place of serenity and inner calm.</p>
+        </section>
+        
+        <section class="newsletter">
+            <h2>Subscribe to Our Newsletter</h2>
+            <form id="newsletterForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                <button type="submit" id="subscribeBtn">Subscribe</button>
+            </form>
+            <p id="subscriptionMessage" style="display: none; color: #4CAF50;">Thank you for subscribing to our newsletter!</p>
+        </section>
+
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Relaxing Music Hub</p>
+    </footer>
+
+    <script>
+        document.getElementById('newsletterForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            console.log('Subscribed: ${name}, ${email}');
+            document.getElementById('subscriptionMessage').style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>
